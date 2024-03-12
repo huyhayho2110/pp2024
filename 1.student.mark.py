@@ -16,6 +16,7 @@ def input_number_students():
             print("Number of student must be exist")
         else:
             return number_student_ver1
+        
 def input_student_info():
     number_student_ver2 = input_number_students()
     for i in range(1, number_student_ver2 + 1):
@@ -45,6 +46,7 @@ def input_course_info():
         course_id = input(f"Enter course id for course {i}: ")
         course_name = input(f"Enter course name for course {i}: ")
         courses.append({"ID": course_id, "Name": course_name})
+
 def select_course_and_input_marks():
     while True:
         course_id = input("Enter the ID of course to input marks (or 'q' to quit): ")
@@ -62,6 +64,7 @@ def select_course_and_input_marks():
                         break
                     else:
                         print("Invalid mark. Please enter a mark between 0 and 20.")
+
 def list_courses():
     for course in courses:
         print(f"ID: {course['ID']}, Name: {course['Name']}")
@@ -88,9 +91,9 @@ def main():
         print("5. List students")
         print("6. Show student marks for a course")
         print("7. Exit")
-        
-        choice = input("\nSelect your choice: ")
 
+        choice = input("\nSelect your choice: ")
+        
         if choice == '1':
             input_student_info()
         elif choice == '2':
